@@ -38,7 +38,7 @@ main {
     position: absolute;
     z-index: 2;
     background-color: var(--white-color);
-    padding: clamp(1.2rem, 1.4rem, 1.6rem);
+    padding: clamp(1rem, 1vw + 1.2rem, 1.4rem);
     border-radius: 12px;
     max-width: 32rem;
     min-width: 21rem;
@@ -70,7 +70,7 @@ main {
 
 .question-item {
     border-bottom: 2px solid var(--purple-100);
-    padding-block-end: clamp(.8rem, 1rem, 1.2rem);
+    padding-block-end: clamp(.6rem, 1vw + .8rem, 1rem);
 }
 
 .question-item:last-child {
@@ -111,7 +111,7 @@ main {
     max-height: 10rem;
     pointer-events: auto;
     visibility: unset;
-    padding-block-start: 1rem;
+    padding-block-start: clamp(0.6rem, 1vw + 0.8rem, 1rem);
     opacity: 1;
 }
 
