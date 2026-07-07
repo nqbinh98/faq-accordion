@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --white-color: hsl(0, 100%, 100%);
+    --purple-100: hsl(275, 100%, 97%);
+    --purple-600: hsl(292, 16%, 49%);
+    --purple-950: hsl(292, 42%, 14%);
+    --purple-700: hsl(281, 83%, 54%);
+    --attribution-color: hsl(228, 45%, 44%);
+}
+
+/* - Weights: 400, 600, 700 */
+body {
+    font-family: "Work Sans", sans-serif;
+    font-size: 1rem;
+}
+
+main {
+    background-color: var(--purple-100);
+    height: 100vh;
+    position: relative;
+}
+
+.container-background {
+    position: absolute;
+    z-index: 1;
+}
+
+.container-background img {
+    width: 100%;
+}
+
+.container-content {
+    position: absolute;
+    z-index: 2;
+    background-color: var(--white-color);
+    padding: 1.4rem;
+    border-radius: 12px;
+    max-width: 32rem;
+    min-width: 21rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-height: 32rem;
+    overflow: auto;
+    box-shadow: 1px 0px 12px 1px var(--purple-600);
+}
+
+.title-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.title-content img {
+    width: 2rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.question-item {
+    border-bottom: 2px solid var(--purple-100);
+    padding-bottom: 1rem;
+
+}
+
+.question-item:last-child {
+    border-bottom: none;
+    padding-bottom: none;
+}
+
+.question-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.question-section:hover {
+    cursor: pointer;
+    color: var(--purple-700);
+}
+
+.question-section span{
+    font-weight: 700;
+}
+
+.answer-section {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    color: var(--purple-600);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .3s ease, max-height .3s ease;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.show {
+    max-height: 10rem;
+    pointer-events: auto;
+    visibility: unset;
+    padding-top: 1rem;
+    opacity: 1;
+}
+
+.hide {
+    display: none;
+}
+
+.attribution { 
+    font-size: 0.6875rem; text-align: center; 
+}
+.attribution a {
+    color: var(--purple-700); 
+}
+
+@media (min-width: 400px) {
+    .container-content { 
+        gap: 2.5rem;
+    }
+
+    .title-content h1 {
+        font-size: 2.5rem;
+    }
+}
