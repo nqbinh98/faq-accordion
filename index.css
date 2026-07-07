@@ -70,7 +70,7 @@ main {
 
 .question-item {
     border-bottom: 2px solid var(--purple-100);
-    padding-block-end: 1rem;
+    padding-block-end: clamp(.8rem, 1rem, 1.2rem);
 }
 
 .question-item:last-child {
