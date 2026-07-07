@@ -3,8 +3,8 @@ const containerContent = document.querySelector(".container-content");
 containerContent.addEventListener('click', function (e) {
     if(e.target.closest('.question-section')) {
         const answerWrapper = e.target.closest('.question-item').querySelector('.answer-section');
-        let btnPlus = e.target.closest('.question-section').querySelector('.btn-plus');
-        let btnMinus = e.target.closest('.question-section').querySelector('.btn-minus');
+        const btnPlus = e.target.closest('.question-section').querySelector('.btn-plus');
+        const btnMinus = e.target.closest('.question-section').querySelector('.btn-minus');
         if (answerWrapper.classList.contains('show')) {
             btnPlus.classList.remove('hide');
             btnMinus.classList.add('hide');
