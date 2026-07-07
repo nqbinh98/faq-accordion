@@ -16,7 +16,7 @@
 /* - Weights: 400, 600, 700 */
 body {
     font-family: "Work Sans", sans-serif;
-    font-size: 1rem;
+    font-size: clamp(0.875rem, 1vw + 0.5rem, 1.25rem);
 }
 
 main {
@@ -70,13 +70,12 @@ main {
 
 .question-item {
     border-bottom: 2px solid var(--purple-100);
-    padding-bottom: 1rem;
-
+    padding-block-end: 1rem;
 }
 
 .question-item:last-child {
-    border-bottom: none;
-    padding-bottom: none;
+    border-bottom: 0;
+    padding-block-end: 0;
 }
 
 .question-section {
@@ -97,7 +96,7 @@ main {
 }
 
 .answer-section {
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1vw + 0.25rem, 1.25rem);
     line-height: 1.4rem;
     color: var(--purple-600);
     opacity: 0;
@@ -121,18 +120,25 @@ main {
 }
 
 .attribution { 
-    font-size: 0.6875rem; text-align: center; 
+    font-size: 0.6875rem; 
+    text-align: center; 
 }
 .attribution a {
     color: var(--purple-700); 
 }
 
-@media (min-width: 400px) {
+@media (min-width: 25rem) {
     .container-content { 
         gap: 2.5rem;
     }
 
     .title-content h1 {
-        font-size: 2.5rem;
+        font-size: clamp(2.875rem, 1vw + 2.5rem, 3.25rem);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .answer-section {
+        transition: none;
     }
 }

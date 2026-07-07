@@ -2,7 +2,7 @@ const containerContent = document.querySelector(".container-content");
 
 containerContent.addEventListener('click', function (e) {
     if(e.target.closest('.question-section')) {
-        let answerWrapper = e.target.closest('.question-item').querySelector('.answer-section');
+        const answerWrapper = e.target.closest('.question-item').querySelector('.answer-section');
         let btnPlus = e.target.closest('.question-section').querySelector('.btn-plus');
         let btnMinus = e.target.closest('.question-section').querySelector('.btn-minus');
         if (answerWrapper.classList.contains('show')) {
